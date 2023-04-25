@@ -330,23 +330,23 @@ h2 {
     top: 50%;
     right: 3rem;
 }
-.explore {
+#explore {
     grid-template-rows: 1.2fr 2.5fr;
 }
-.explore > .circle {
+#explore > .circle {
     grid-column-start: 7;
     background-color: #8613A5;
 }
-.explore > .circle > h2 {
+#explore > .circle > h2 {
     margin-left: 1.9rem;
 }
-.creators .circle {
+#cretors .circle {
     background-color: #E03054;
 }
-.creators .circle h2 {
+#creators .circle h2 {
     margin-left: 2.4rem;
 }
-.creators > div:nth-child(2) {
+#creators > div:nth-child(2) {
     grid-area: 2 / 3 / 3 / -3;
     display: flex;
     column-gap: 4.5rem;
