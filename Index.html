@@ -10,57 +10,82 @@
         <header>
             <nav>
                 <div class="logo">
-                    <img src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\image.svg">
+                    <img src="image/image.png">
                 </div>
-                <ul class="menu">
+                <label for="checkbox" class="btn">
+                    <input type="checkbox" id="checkbox" hidden>
+                    <div class="menu">
+                        <ul class="navigation">
+                            <li class="point"><a href="#explore">Explore</a></li>
+                            <li class="point"><a href="#creators">Creators</a></li>
+                            <li class="point"><a href="#">Community</a></li>
+                            <li class="point"><a href="#">Connect Wallet</a></li>
+                        </ul>
+                    </div>
+                </label>
+                <ul class="card">
                     <li class="point"><a href="#explore">Explore</a></li>
-                    <li class="point"><a href="##creators">Creators</a></li>
+                    <li class="point"><a href="#creators">Creators</a></li>
                     <li class="point"><a href="#">Community</a></li>
                     <li class="point"><a href="#">Connect Wallet</a></li>
                 </ul>
             </nav>
-            <section class="box-header">
-                <div class="item-1">
-                    <h1>Explore, Buy and <br>Sell the <span>Best <br>NFTs!</span></h1>
-                    <div class="buttons">
-                        <button class="button button-explore">Explore</button>
-                        <button class="button button-create">Create</button>
+            <div class="item-1">
+                <h1>Explore, Buy and <br>Sell the <span>Best <br>NFTs!</span></h1>
+                <div class="buttons">
+                    <button class="button button-explore" href="#explore">Explore</button>
+                    <button class="button button-create" href="#">Create</button>
+                </div>
+                <div class="statistics">
+                    <div class="counter">
+                        <p>32k+</p>
+                        <p>Artworks</p>
                     </div>
-                    <div class="statistics">
-                        <div class="counter">
-                            <p>32k+</p>
-                            <p>Artworks</p>
+                    <div class="counter">
+                        <p>20k+</p>
+                        <p>Auctions</p>
+                    </div>
+                    <div class="counter">
+                        <p>12k+</p>
+                        <p>Creators</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item-2 blurr">
+                <div>
+                    <div>
+                        <img src="image/Group 36652.png">
+                        <div class="rectangle-top">
+                            <div class="bid-current">
+                                <p>Current Bid</p>
+                                <p>0.99 ETH</p>
+                            </div>
+                            <div class="duration">
+                                <p>Ends in</p>
+                                <p>25 hrs</p>
+                            </div>
                         </div>
-                        <div class="counter">
-                            <p>20k+</p>
-                            <p>Auctions</p>
-                        </div>
-                        <div class="counter">
-                            <p>12k+</p>
-                            <p>Creators</p>
+                        <div class="rectangle-bottom">
+                            <div class="artist">
+                                <p>Artist</p>
+                                <p>@wzard</p>
+                            </div>
+                            <div>
+                                <button class="button start-bid" href="#">Start Bid</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="item-2 blurr">
-                    <div>
-                        <img src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\Hero image.svg">
+                <a href="#subscribe">
+                    <div class="scroll-down">
+                        <div class="arrow"></div>
                     </div>
-                    <div>
-                        <a class="scroll-down" href="#clients">
-                            <div class="arrow"></div>
-                        </a>
-                    </div>
-                </div>
-            </section>
+                </a>
+            </div>
         </header>
         <main>
-            <section class="box">
-                <div id="clients">
-                    <p style="font-weight: 100;">coinbase</p>
-                    <p style="font-weight: 900;">BLOCKCHAIN.COM</p>
-                    <p style="font-weight: 500;">BINANCE</p>
-                    <p>Bit<span style="font-weight: 500;">MEX</span></p>
-                </div>
+            <section id="clients">
+                <img src="image/Clients logo.png">
             </section>
             <section class="auctions">
                 <div class="circle">
@@ -76,75 +101,363 @@
                 </div>
                 <div class="catalog">
                     <div>
-                        <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\place a bid 1.svg">
+                        <div class="countdown">
+                            <img class="poster" src="image/virtual art.png">
+                            <time>03:18:24</time>
+                        </div>
+                        <div>
+                            <div class="painter-estimation">
+                                <div class="profile">
+                                    <img src="image/Profile image1.png">
+                                    <div class="painter">
+                                        <p>Virtual Art</p>
+                                        <p>by @wzard</p>
+                                    </div>
+                                </div>
+                                <div class="estimation">
+                                    <img src="image/Vector.png">
+                                    <p>92</p>
+                                </div>
+                            </div>
+                            <div class="catalog-bid">
+                                <p>Current Bid</p>
+                                <p>4.89 ETH</p>
+                            </div>
+                            <div>
+                                <button class="button button-bid" href="#">Place a bid</button>
+                            </div>
+                        </div>
                     </div>
                     <div>
-                        <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\place a bid 2.svg">
+                        <div class="countdown">
+                            <img class="poster" src="image/Image (2).png">
+                            <time>03:18:24</time>
+                        </div>
+                        <div>
+                            <div class="painter-estimation">
+                                <div class="profile">
+                                    <img src="image/Profile image1.png">
+                                    <div class="painter">
+                                        <p>Virtual Art</p>
+                                        <p>by @wzard</p>
+                                    </div>
+                                </div>
+                                <div class="estimation">
+                                    <img src="image/Vector.png">
+                                    <p>92</p>
+                                </div>
+                            </div>
+                            <div class="catalog-bid">
+                                <p>Current Bid</p>
+                                <p>4.89 ETH</p>
+                            </div>
+                            <div>
+                                <button class="button button button-bid" href="#">Place a bid</button>
+                            </div>
+                        </div>
                     </div>
                     <div>
-                        <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\place a bid 1.svg">
+                        <div class="countdown">
+                            <img class="poster image-blue" src="image/image 10.png">
+                            <time>03:18:24</time>
+                        </div>
+                        <div>
+                            <div class="painter-estimation">
+                                <div class="profile">
+                                    <img src="image/Profile image1.png">
+                                    <div class="painter">
+                                        <p>Virtual Art</p>
+                                        <p>by @wzard</p>
+                                    </div>
+                                </div>
+                                <div class="estimation">
+                                    <img src="image/Vector.png">
+                                    <p>92</p>
+                                </div>
+                            </div>
+                            <div class="catalog-bid">
+                                <p>Current Bid</p>
+                                <p>4.89 ETH</p>
+                            </div>
+                            <div>
+                                <button class="button button-bid" href="#">Place a bid</button>
+                            </div>
+                        </div>
                     </div>
                     <div>
-                        <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\place a bid 2.svg">
+                        <div class="countdown">
+                            <img class="poster" src="image/virtual art.png">
+                            <time>03:18:24</time>
+                        </div>
+                        <div>
+                            <div class="painter-estimation">
+                                <div class="profile">
+                                    <img src="image/Profile image1.png">
+                                    <div class="painter">
+                                        <p>Virtual Art</p>
+                                        <p>by @wzard</p>
+                                    </div>
+                                </div>
+                                <div class="estimation">
+                                    <img src="image/Vector.png">
+                                    <p>92</p>
+                                </div>
+                            </div>
+                            <div class="catalog-bid">
+                                <p>Current Bid</p>
+                                <p>4.89 ETH</p>
+                            </div>
+                            <div>
+                                <button class="button button-bid" href="#">Place a bid</button>
+                            </div>
+                        </div>
                     </div>
                     <div>
-                        <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\place a bid 1.svg">
+                        <div class="countdown">
+                            <img class="poster" src="image/Image (2).png">
+                            <time>03:18:24</time>
+                        </div>
+                        <div>
+                            <div class="painter-estimation">
+                                <div class="profile">
+                                    <img src="image/Profile image1.png">
+                                    <div class="painter">
+                                        <p>Virtual Art</p>
+                                        <p>by @wzard</p>
+                                    </div>
+                                </div>
+                                <div class="estimation">
+                                    <img src="image/Vector.png">
+                                    <p>92</p>
+                                </div>
+                            </div>
+                            <div class="catalog-bid">
+                                <p>Current Bid</p>
+                                <p>4.89 ETH</p>
+                            </div>
+                            <div>
+                                <button class="button button-bid" href="">Place a bid</button>
+                            </div>
+                        </div>
                     </div>
                     <div>
-                        <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\place a bid 2.svg">
+                        <div class="countdown">
+                            <img class="poster image-blue" src="image/image 10.png">
+                            <time>03:18:24</time>
+                        </div>
+                        <div>
+                            <div class="painter-estimation">
+                                <div class="profile">
+                                    <img src="image/Profile image1.png">
+                                    <div class="painter">
+                                        <p>Virtual Art</p>
+                                        <p>by @wzard</p>
+                                    </div>
+                                </div>
+                                <div class="estimation">
+                                    <img src="image/Vector.png">
+                                    <p>92</p>
+                                </div>
+                            </div>
+                            <div class="catalog-bid">
+                                <p>Current Bid</p>
+                                <p>4.89 ETH</p>
+                            </div>
+                            <div>
+                                <button class="button button-bid">Place a bid</button>
+                            </div>
+                        </div>
                     </div>
                     <div>
-                        <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\place a bid 1.svg">
+                        <div class="countdown">
+                            <img class="poster" src="image/virtual art.png">
+                            <time>03:18:24</time>
+                        </div>
+                        <div>
+                            <div class="painter-estimation">
+                                <div class="profile">
+                                    <img src="image/Profile image1.png">
+                                    <div class="painter">
+                                        <p>Virtual Art</p>
+                                        <p>by @wzard</p>
+                                    </div>
+                                </div>
+                                <div class="estimation">
+                                    <img src="image/Vector.png">
+                                    <p>92</p>
+                                </div>
+                            </div>
+                            <div class="catalog-bid">
+                                <p>Current Bid</p>
+                                <p>4.89 ETH</p>
+                            </div>
+                            <div>
+                                <button class="button button-bid">Place a bid</button>
+                            </div>
+                        </div>
                     </div>
                     <div>
-                        <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\place a bid 2.svg">
+                        <div class="countdown">
+                            <img class="poster" src="image/Image (2).png">
+                            <time>03:18:24</time>
+                        </div>
+                        <div>
+                            <div class="painter-estimation">
+                                <div class="profile">
+                                    <img src="image/Profile image1.png">
+                                    <div class="painter">
+                                        <p>Virtual Art</p>
+                                        <p>by @wzard</p>
+                                    </div>
+                                </div>
+                                <div class="estimation">
+                                    <img src="image/Vector.png">
+                                    <p>92</p>
+                                </div>
+                            </div>
+                            <div class="catalog-bid">
+                                <p>Current Bid</p>
+                                <p>4.89 ETH</p>
+                            </div>
+                            <div>
+                                <button class="button button-bid">Place a bid</button>
+                            </div>
+                        </div>
                     </div>
                     <div>
-                        <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\place a bid 1.svg">
+                        <div class="countdown">
+                            <img class="poster image-blue" src="image/image 10.png">
+                            <time>03:18:24</time>
+                        </div>
+                        <div>
+                            <div class="painter-estimation">
+                                <div class="profile">
+                                    <img src="image/Profile image1.png">
+                                    <div class="painter">
+                                        <p>Virtual Art</p>
+                                        <p>by @wzard</p>
+                                    </div>
+                                </div>
+                                <div class="estimation">
+                                    <img src="image/Vector.png">
+                                    <p>92</p>
+                                </div>
+                            </div>
+                            <div class="catalog-bid">
+                                <p>Current Bid</p>
+                                <p>4.89 ETH</p>
+                            </div>
+                            <div>
+                                <button class="button button-bid">Place a bid</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <button class="button button-view">View All</button>
             </section>
-            <section class="box works">
+            <section class="works">
                 <div>
                     <h2>How it works</h2>
                 </div>
                 <div class="steps">
-                    <img src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\All step.svg">
+                    <img src="image/All step.png">
                 </div>
             </section>
             <div id="background">
-                <section class="box collections">
+                <section class="collections">
                     <div class="circle">
                         <h2>Popular Collections</h2>
                     </div>
-                    <div class="catalog">
+                    <div class="collections-catalog">
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\1.svg">
+                            <img class="poster" src="image/Image (3).png">
+                            <div class="collections-content">
+                                <div>
+                                    <img src="image/Ellipse 2.png">
+                                    <p>@wzard</p>
+                                </div>
+                                <p>ERC-721</p>
+                            </div>
                         </div>
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\2.svg">
+                            <img class="poster" src="image/Image (4).png">
+                            <div class="collections-content">
+                                <div>
+                                    <img src="image/Ellipse 2.png">
+                                    <p>@wzard</p>
+                                </div>
+                                <p>ERC-721</p>
+                            </div>
                         </div>
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\1.svg">
+                            <img class="poster" src="image/Image (3).png">
+                            <div class="collections-content">
+                                <div>
+                                    <img src="image/Ellipse 2.png">
+                                    <p>@wzard</p>
+                                </div>
+                                <p>ERC-721</p>
+                            </div>
                         </div>
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\2.svg">
+                            <img class="poster" src="image/Image (4).png">
+                            <div class="collections-content">
+                                <div>
+                                    <img src="image/Ellipse 2.png">
+                                    <p>@wzard</p>
+                                </div>
+                                <p>ERC-721</p>
+                            </div>
                         </div>
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\1.svg">
+                            <img class="poster" src="image\Image (3).png">
+                            <div class="collections-content">
+                                <div>
+                                    <img src="image/Ellipse 2.png">
+                                    <p>@wzard</p>
+                                </div>
+                                <p>ERC-721</p>
+                            </div>
                         </div>
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\2.svg">
+                            <img class="poster" src="image/Image (4).png">
+                            <div class="collections-content">
+                                <div>
+                                    <img src="image/Ellipse 2.png">
+                                    <p>@wzard</p>
+                                </div>
+                                <p>ERC-721</p>
+                            </div>
                         </div>
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\1.svg">
+                            <img class="poster" src="image/Image (3).png">
+                            <div class="collections-content">
+                                <div>
+                                    <img src="image/Ellipse 2.png">
+                                    <p>@wzard</p>
+                                </div>
+                                <p>ERC-721</p>
+                            </div>
                         </div>
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\2.svg">
+                            <img class="poster" src="image/Image (4).png">
+                            <div class="collections-content">
+                                <div>
+                                    <img src="image/Ellipse 2.png">
+                                    <p>@wzard</p>
+                                </div>
+                                <p>ERC-721</p>
+                            </div>
                         </div>
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\1.svg">
+                            <img class="poster" src="image/Image (3).png">
+                            <div class="collections-content">
+                                <div>
+                                    <img src="image/Ellipse 2.png">
+                                    <p>@wzard</p>
+                                </div>
+                                <p>ERC-721</p>
+                            </div>
                         </div>
                         <button class="button-circle">
                             <div class="more"></div>
@@ -152,66 +465,291 @@
                     </div>
                     <button class="button button-view">View All</button>
                 </section>
-                <section class="box" id="explore">
+                <section id="explore">
                     <div class="circle">
                         <h2>Explore By Categories</h2>
                     </div>
-                    <div class="catalog">
+                    <div class="explore-catalog">
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\bid1.svg">
+                            <div class="poster-bid">
+                                <img class="poster" src="image/unsplash_5rsNohd8bY8.png">
+                                <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            </div>
+                            <div>
+                                <div class="painter-estimation">
+                                    <div class="explore-profile">
+                                        <img src="image/Ellipse 1.png">
+                                        <div class="explore-painter">
+                                            <p>Virtual Art</p>
+                                            <p>by @wzard</p>
+                                        </div>
+                                    </div>
+                                    <div class="explore-estimation estimation">
+                                        <img src="image/Vector.png">
+                                        <p>92</p>
+                                    </div>
+                                </div>
+                                <div class="catalog-bid">
+                                    <p>Current Bid</p>
+                                    <p>4.89 ETH</p>
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\Bid2.svg">
+                            <div class="poster-bid">
+                                <img class="poster" src="image/COLLAG~1.PNG">
+                                <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            </div>
+                            <div>
+                                <div class="painter-estimation">
+                                    <div class="explore-profile">
+                                        <img src="image/Ellipse 1.png">
+                                        <div class="explore-painter">
+                                            <p>Virtual Art</p>
+                                            <p>by @wzard</p>
+                                        </div>
+                                    </div>
+                                    <div class="explore-estimation estimation">
+                                        <img src="image/Vector.png">
+                                        <p>92</p>
+                                    </div>
+                                </div>
+                                <div class="catalog-bid">
+                                    <p>Current Bid</p>
+                                    <p>4.89 ETH</p>
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\Bid3.svg">
+                            <div class="poster-bid">
+                                <img class="poster" src="image/Image (6).png">
+                                <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            </div>
+                            <div>
+                                <div class="painter-estimation">
+                                    <div class="explore-profile">
+                                        <img src="image/Ellipse 1.png">
+                                        <div class="explore-painter">
+                                            <p>Virtual Art</p>
+                                            <p>by @wzard</p>
+                                        </div>
+                                    </div>
+                                    <div class="explore-estimation estimation">
+                                        <img src="image/Vector.png">
+                                        <p>92</p>
+                                    </div>
+                                </div>
+                                <div class="catalog-bid">
+                                    <p>Current Bid</p>
+                                    <p>4.89 ETH</p>
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\bid1.svg">
+                            <div class="poster-bid">
+                                <img class="poster" src="image/COLLAG~1.PNG">
+                                <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            </div>
+                            <div>
+                                <div class="painter-estimation">
+                                    <div class="explore-profile">
+                                        <img src="image/Ellipse 1.png">
+                                        <div class="explore-painter">
+                                            <p>Virtual Art</p>
+                                            <p>by @wzard</p>
+                                        </div>
+                                    </div>
+                                    <div class="explore-estimation estimation">
+                                        <img src="image/Vector.png">
+                                        <p>92</p>
+                                    </div>
+                                </div>
+                                <div class="catalog-bid">
+                                    <p>Current Bid</p>
+                                    <p>4.89 ETH</p>
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\Bid2.svg">
+                            <div class="poster-bid">
+                                <img class="poster" src="image\unsplash_5rsNohd8bY8.png">
+                                <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            </div>
+                            <div>
+                                <div class="painter-estimation">
+                                    <div class="explore-profile">
+                                        <img src="image/Ellipse 1.png">
+                                        <div class="explore-painter">
+                                            <p>Virtual Art</p>
+                                            <p>by @wzard</p>
+                                        </div>
+                                    </div>
+                                    <div class="explore-estimation estimation">
+                                        <img src="image/Vector.png">
+                                        <p>92</p>
+                                    </div>
+                                </div>
+                                <div class="catalog-bid">
+                                    <p>Current Bid</p>
+                                    <p>4.89 ETH</p>
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\Bid3.svg">
+                            <div class="poster-bid">
+                                <img class="poster" src="image\COLLAG~1.PNG">
+                                <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            </div>
+                            <div>
+                                <div class="painter-estimation">
+                                    <div class="explore-profile">
+                                        <img src="image/Ellipse 1.png">
+                                        <div class="explore-painter">
+                                            <p>Virtual Art</p>
+                                            <p>by @wzard</p>
+                                        </div>
+                                    </div>
+                                    <div class="explore-estimation estimation">
+                                        <img src="image/Vector.png">
+                                        <p>92</p>
+                                    </div>
+                                </div>
+                                <div class="catalog-bid">
+                                    <p>Current Bid</p>
+                                    <p>4.89 ETH</p>
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\bid1.svg">
+                            <div class="poster-bid">
+                                <img class="poster" src="image/Image (6).png">
+                                <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            </div>
+                            <div>
+                                <div class="painter-estimation">
+                                    <div class="explore-profile">
+                                        <img src="image/Ellipse 1.png">
+                                        <div class="explore-painter">
+                                            <p>Virtual Art</p>
+                                            <p>by @wzard</p>
+                                        </div>
+                                    </div>
+                                    <div class="explore-estimation estimation">
+                                        <img src="image/Vector.png">
+                                        <p>92</p>
+                                    </div>
+                                </div>
+                                <div class="catalog-bid">
+                                    <p>Current Bid</p>
+                                    <p>4.89 ETH</p>
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <img clss="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\Bid2.svg">
+                            <div class="poster-bid">
+                                <img class="poster" src="image/COLLAG~1.PNG">
+                                <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            </div>
+                            <div>
+                                <div class="painter-estimation">
+                                    <div class="explore-profile">
+                                        <img src="image/Ellipse 1.png">
+                                        <div class="explore-painter">
+                                            <p>Virtual Art</p>
+                                            <p>by @wzard</p>
+                                        </div>
+                                    </div>
+                                    <div class="explore-estimation estimation">
+                                        <img src="image/Vector.png">
+                                        <p>92</p>
+                                    </div>
+                                </div>
+                                <div class="catalog-bid">
+                                    <p>Current Bid</p>
+                                    <p>4.89 ETH</p>
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <img class="poster" src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\Bid3.svg">
+                            <div class="poster-bid">
+                                <img class="poster" src="image/unsplash_5rsNohd8bY8.png">
+                                <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            </div>
+                            <div>
+                                <div class="painter-estimation">
+                                    <div class="explore-profile">
+                                        <img src="image/Ellipse 1.png">
+                                        <div class="explore-painter">
+                                            <p>Virtual Art</p>
+                                            <p>by @wzard</p>
+                                        </div>
+                                    </div>
+                                    <div class="explore-estimation estimation">
+                                        <img src="image/Vector.png">
+                                        <p>92</p>
+                                    </div>
+                                </div>
+                                <div class="catalog-bid">
+                                    <p>Current Bid</p>
+                                    <p>4.89 ETH</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <button class="button button-view">View All</button>
                 </section>
-                <section class="box" id="creators">
+                <section id="creators">
                     <div class="circle">
                         <h2>Top Creators</h2>
                     </div>
-                    <div>
-                        <div class="creators-top">
-                            <div>
-                                <img src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\Top Creators-1.svg">
+                    <div class="creators-cards">
+                        <div>
+                            <img src="image/Profile image1.png">
+                            <div class="creators-content">
+                                <p>Wzard Dee</p>
+                                <p>4.89 ETH</p>
                             </div>
-                            <div>
-                                <img src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\Top Creators-3.svg">
+                            <div class="items">
+                                <p>33</p>
+                                <p>Items</p>
                             </div>
                         </div>
-                        <div class="creators-top">
-                            <div>
-                                <img src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\Top Creators-2.svg">
+                        <div>
+                            <img src="image/Ellipse 2.png">
+                            <div class="creators-content">
+                                <p>Wzard Dee</p>
+                                <p>4.89 ETH</p>
                             </div>
-                            <div>
-                                <img src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\Top Creators-4.svg">
+                            <div class="items">
+                                <p>33</p>
+                                <p>Items</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="image/Ellipse 14.png">
+                            <div class="creators-content">
+                                <p>Wzard Dee</p>
+                                <p>4.89 ETH</p>
+                            </div>
+                            <div class="items">
+                                <p>33</p>
+                                <p>Items</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="image/Mask Group.png">
+                            <div class="creators-content">
+                                <p>Wzard Dee</p>
+                                <p>4.89 ETH</p>
+                            </div>
+                            <div class="items">
+                                <p>33</p>
+                                <p>Items</p>
                             </div>
                         </div>
                     </div>
-                    <button class="button button-view">View All</button>
                 </section>
-                <section class="subscribe">
+                <section id="subscribe">
                     <h2>Ready for Next NFT Drop?</h2>
                     <form class="subscription">
                         <input class="add-email" type="email" placeholder="info@gmail.com">
@@ -223,51 +761,51 @@
             </div>
         </main>
         <footer>
-            <section class="footer">
-                <div class="logo-footer">
-                    <img src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\Logo-footer.svg">
-                </div>
+            <div>
+                <a class="logo-footer" href="#">
+                    <img src="image/image (5).png">
+                </a>
                 <div>
                     <div class="footer-text">
                         <p>Nec, enim lacus, magna pharetra. Phasellus tincidunt nulla pharetra <br>gravida est.</p>
                     </div>
                     <div class="elements">
-                        <div>
-                            <img src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\bx_bxl-youtube.svg">
-                        </div>
-                        <div>
-                            <img src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\bx_bxl-twitter.svg">
-                        </div>
-                        <div>
-                            <img src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\Vector.svg">
-                        </div>
-                        <div>
-                            <img src="C:\Users\Alexandra\OneDrive\Рабочий стол\Проекты\NFT-Marketplace\Image\Vector (1).svg">
-                        </div>
+                        <a href="#">
+                            <img src="image/bx_bxl-youtube.png">
+                        </a>
+                        <a href="#">
+                            <img src="image/bx_bxl-twitter.png">
+                        </a>
+                        <a href="#">
+                            <img src="image/Vector (2).png">
+                        </a>
+                        <a href="#">
+                            <img src="image/Vector (3).png">
+                        </a>
                     </div>
                     <div class="footer-rights">
                         <p>All rights reserved@2021</p>
                     </div>
                 </div>
-                <div class="about">
-                    <h3>About Us</h3>
-                    <ul class="about-list">
-                        <li><a href="#">About NFTs</a></li>
-                        <li><a href="#">Live Auctions</a></li>
-                        <li><a href="#">NFT Blog</a></li>
-                        <li><a href="#">Activity</a></li>
-                    </ul>
-                </div>
-                <div class="support">
-                    <h3>Support</h3>
-                    <ul class="support-list">
-                        <li><a href="#">Help & Support</a></li>
-                        <li><a href="#">Item Details</a></li>
-                        <li><a href="#">Author Profile</a></li>
-                        <li><a href="#">Collection</a></li>
-                    </ul>
-                </div>
-            </section>
+            </div>
+            <div class="about">
+                <h3>About Us</h3>
+                <ul class="about-list">
+                    <li><a href="#">About NFTs</a></li>
+                    <li><a href="#">Live Auctions</a></li>
+                    <li><a href="#">NFT Blog</a></li>
+                    <li><a href="#">Activity</a></li>
+                </ul>
+            </div>
+            <div class="support">
+                <h3>Support</h3>
+                <ul class="support-list">
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">Item Details</a></li>
+                    <li><a href="#">Author Profile</a></li>
+                    <li><a href="#">Collection</a></li>
+                </ul>
+            </div>
         </footer>
     </body>
 </html>
