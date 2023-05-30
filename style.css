@@ -65,7 +65,7 @@ label {
     text-decoration: none;
     color: #F5FBF2;
 }
-.point:last-child > a, .point > a:hover, h1 span {
+.point:last-child > a, .point > a:hover, h1 span, .steps p {
     color: #FFCE4E;
 }
 .point:not(:last-child):hover {
@@ -162,6 +162,9 @@ button:not([class*="submit-email"]):not([class$="circle"]):active, .scroll-down:
 .blurr > div:first-child > div {
     position: relative;
 }
+.blurr img {
+    min-width: 17.6rem;
+}
 img {
     display: block;
     max-width: 100%;
@@ -201,21 +204,22 @@ img {
     justify-content: space-between;
     background-color: #FFFFFF;
 }
-.rectangle-bottom div {
-    margin: 2.2rem 2.4rem 0 3.8rem;
-}
-.artist {
-    padding-top: 2.1rem;
+.rectangle-bottom {
+    padding: 2.2rem 2.4rem 0 3.8rem;
 }
 .artist > p:nth-child(1) {
     font-size: 1.8rem;
+    font-weight: bold;
     letter-spacing: 0.1rem;
     color: #16091B;
 }
 .artist > p:nth-child(2) {
     font-size: 1.5rem;
-    line-height: 2.2rem;
+    line-height: 2.2em;
     color: #594D5E;
+}
+.start-bid {
+    margin-top: 0.1rem;
 }
 .start-bid, .place-bid {
     width: 12.8rem;
@@ -284,6 +288,11 @@ main > section:not(:nth-child(1)), #background > section:not(:nth-child(3), :las
 }
 #clients {
     margin: 11.7rem 11.1rem 12.7rem 11.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 2.9rem;
 }
 .auctions {
     height: 77.1rem;
@@ -457,11 +466,35 @@ time {
     border: 1px solid #FFCE4E;
 }
 .steps {
-    margin: 4.4rem;
+    margin: 4.4rem 8.3rem;
+    display: flex;
+    white-space: nowrap;
 }
-#background {
-    background-image: linear-gradient(to top, #1C121F, #1C121F21), url(Image/BG.svg);
-    background-position: 0 25rem;
+.steps img {
+    margin: auto;
+}
+.steps p {
+    margin-top: 2rem;
+}
+.steps p, .submit-email p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.line {
+    margin-top: 3.2rem;
+    width: 10.8rem;
+    height: 0.1rem;
+    background: repeating-linear-gradient(to left, #794187 0, #794187 0.9rem, transparent 0.9rem, transparent 1.4rem);
+    position: relative;
+}
+.line > div {
+    position: absolute;
+    top: -0.3rem;
+    right: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    transform: rotate(45deg);
+    background-color: #794187;
 }
 .collections > .circle {
     margin-left: calc(50% - 21.3rem);
@@ -500,6 +533,10 @@ time {
     position: absolute;
     top: 50%;
     right: 3rem;
+}
+#explore {
+    padding: 5.1rem 0 5rem;
+    background-color: #251928;
 }
 #explore > .circle {
     margin-left: calc(50% - 22.5rem);
@@ -626,6 +663,7 @@ time {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: linear-gradient(to top, #1C121F21, #1C121F), url(image/Pattern.png);
 }
 #subscribe > h2 {
     padding-bottom: 1.9rem;
@@ -657,10 +695,6 @@ time {
     color: #251928;
     background-color: #E7B226;
     cursor: pointer;
-}
-.submit-email p {
-    font-size: 1.5rem;
-    font-weight: bold;
 }
 footer {
     max-height: 32rem;
@@ -717,16 +751,23 @@ h3 {
         display: none;
     }
     nav {
-        height: 3rem;
         position: fixed;
-        top: 2.1rem;
+        top: 0;
+        left: 0;
+        right: 0;
+        /**height: 3rem;**/
+        padding: 2.1rem 1.1rem 0 1rem;
+        background-color: #1C121F;
+        /**top: 2.1rem;
         left: 1rem;
-        right: 1.1rem;
+        right: 1.1rem;**/
     }
     .logo {
         width: 3rem;
     }
     .btn {
+        padding-top: 1.4rem;
+        height: 3rem;
         display: block;
         align-self: center;
         cursor: pointer;
@@ -763,15 +804,21 @@ h3 {
         right: 100%;
     }
     .navigation {
+        margin-top: 1.6rem;
         position: fixed;
-        right: -100%;
-        margin-top: 3rem;
+        right: -300%;
+        width: 23.4rem;
+        height: 85vh;
+        padding-top: 3rem;
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
         align-items: center;
+        background-color: #1C121F;
     }
-    .point:last-child {
-        display: none;
+    .navigation .point {
+        margin: 0;
+        width: fit-content;
     }
     [class*="item"] {
         margin-left: 0;
@@ -811,8 +858,12 @@ h3 {
     }
     .item-2 {
         margin-top: -39.4rem;
-        padding: 5rem 0.3rem 2.7rem 2.7rem;
+        width: 23.4rem;
         height: 31.3rem;
+        padding: 5rem 0.3rem 2.7rem 2.7rem;
+    }
+    .blurr > div:first-child > div {
+        width: 17.6rem;
     }
     .rectangle-top {
         height: 4.6rem;
@@ -829,13 +880,7 @@ h3 {
     }
     .rectangle-bottom {
         height: 5.1rem;
-    }
-    .rectangle-bottom div {
-        margin: 0;
-    }
-    .artist {
-        margin: 0;
-        padding: 0.9rem 0 1.2rem 2.8rem;
+        padding: 1rem 1.7rem 1.2rem 2.8rem;
     }
     .rectangle-bottom p:first-child {
         font-size: 1.1rem;
@@ -845,13 +890,11 @@ h3 {
     .rectangle-bottom p:last-child {
         font-size: 0.9rem;
     }
-    .rectangle-bottom div:last-child {
-        padding: 1.3rem 1.7rem 1.2rem;
-    }
     .start-bid {
+        margin-top: 0.3rem;
         max-width: 7.6rem;
         max-height: 2.6rem;
-        padding: 0.5rem 1.5rem;
+        padding: 0;
         font-size: 1rem;
         letter-spacing: 0;
     }
