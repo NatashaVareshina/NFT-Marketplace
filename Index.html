@@ -5,6 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NFT Marketplace</title>
         <link href="style.css" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap');
+        </style>
+        <script>
+            const buttonRight = document.getElementById('right');
+            const buttonLeft = document.getElementById('left');
+            
+            buttonRight.onclick = function () {
+                document.getElementById('catalog').scrollLeft += 100;
+            };
+            buttonLeft.onclick = function () {
+                document.getElementById('catalog').scrollLeft -= 100;
+            };
+        </script>
     </head>
     <body>
         <header>
@@ -12,78 +27,79 @@
                 <a class="logo" href="#">
                     <img src="image/image.png">
                 </a>
+                <input type="checkbox" id="checkbox" hidden>
                 <label for="checkbox" class="btn">
-                    <input type="checkbox" id="checkbox" hidden>
-                    <div class="menu">
-                        <ul class="navigation">
-                            <li class="point"><a href="#explore">Explore</a></li>
-                            <li class="point"><a href="#creators">Creators</a></li>
-                            <li class="point"><a href="#">Community</a></li>
-                            <li class="point"><a href="#">Connect Wallet</a></li>
-                        </ul>
-                    </div>
+                    <div class="menu_hamburger"></div>
                 </label>
-                <ul class="card">
-                    <li class="point"><a href="#explore">Explore</a></li>
-                    <li class="point"><a href="#creators">Creators</a></li>
-                    <li class="point"><a href="#">Community</a></li>
-                    <li class="point"><a href="#">Connect Wallet</a></li>
-                </ul>
+                <div class="menu_list">
+                    <ul>
+                        <li class="point"><a href="#explore">Explore</a></li>
+                        <li class="point"><a href="#creators">Creators</a></li>
+                        <li class="point"><a href="#">Community</a></li>
+                        <li class="point"><a href="#">Connect Wallet</a></li>
+                    </ul>
+                </div>
             </nav>
-            <div class="item-1">
-                <h1>Explore, Buy and Sell the <span>Best <br>NFTs!</span></h1>
-                <div class="buttons">
-                    <button class="button button-explore" href="#explore">Explore</button>
-                    <button class="button button-create" href="#">Create</button>
-                </div>
-                <div class="statistics">
-                    <div class="counter">
-                        <p>32k+</p>
-                        <p>Artworks</p>
-                    </div>
-                    <div class="counter">
-                        <p>20k+</p>
-                        <p>Auctions</p>
-                    </div>
-                    <div class="counter">
-                        <p>12k+</p>
-                        <p>Creators</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item-2 blurr">
-                <div>
-                    <div>
-                        <img src="image/Group 36652.png">
-                        <div class="rectangle-top">
-                            <div class="bid-current">
-                                <p>Current Bid</p>
-                                <p>0.99 ETH</p>
-                            </div>
-                            <div class="duration">
-                                <p>Ends in</p>
-                                <p>25 hrs</p>
-                            </div>
-                        </div>
-                        <div class="rectangle-bottom">
-                            <div class="artist">
-                                <p>Artist</p>
-                                <p>@wzard</p>
-                            </div>
-                            <div>
-                                <button class="button start-bid" href="#">Start Bid</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#subscribe">
-                    <div class="scroll-down">
-                        <div class="arrow"></div>
-                    </div>
-                </a>
-            </div>
         </header>
         <main>
+            <section class="hero">
+                <div class="item-1">
+                    <h1>Explore, Buy and Sell the <span>Best <br>NFTs!</span></h1>
+                    <div class="buttons">
+                        <a href="#explore">
+                            <button class="button button_explore">Explore</button>
+                        </a>
+                        <a href="#">
+                            <button class="button button_create">Create</button>
+                        </a>
+                    </div>
+                    <div class="statistics">
+                        <div class="counter">
+                            <p>32k+</p>
+                            <p>Artworks</p>
+                        </div>
+                        <div class="counter">
+                            <p>20k+</p>
+                            <p>Auctions</p>
+                        </div>
+                        <div class="counter">
+                            <p>12k+</p>
+                            <p>Creators</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-2 blurr">
+                    <div>
+                        <div>
+                            <img src="image/Group 36652.png">
+                            <div class="rectangle_top">
+                                <div class="bid_current">
+                                    <p>Current Bid</p>
+                                    <p>0.99 ETH</p>
+                                </div>
+                                <div class="duration">
+                                    <p>Ends in</p>
+                                    <p>25 hrs</p>
+                                </div>
+                            </div>
+                            <div class="rectangle_bottom">
+                                <div class="artist">
+                                    <p>Artist</p>
+                                    <p>@wzard</p>
+                                </div>
+                                <a href="#">
+                                    <button class="button bid_start">Start Bid</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#subscribe">
+                        <div class="scroll_down">
+                            <div class="arrow"></div>
+                        </div>
+                    </a>
+                </div>
+            </section>
             <section id="clients">
                 <img src="image/Vector (4).png">
                 <img src="image/Vector (5).png">
@@ -91,18 +107,19 @@
                 <img src="image/bitmex 1.png">
             </section>
             <section class="auctions">
-                <div class="circle">
+                <div class="title">
+                    <span class="circle"></span>
                     <h2>Live Auctions</h2>
                 </div>
                 <div class="navigation">
-                    <button class="button-circle">
-                        <div class="more hide"></div>
+                    <button class="button_circle" id="left">
+                        <div class="right left"></div>
                     </button>
-                    <button class="button-circle">
-                        <div class="more"></div>
+                    <button class="button_circle" id="right">
+                        <div class="right"></div>
                     </button>
                 </div>
-                <div class="catalog">
+                <div class="catalog" id="catalog">
                     <div>
                         <div class="countdown">
                             <img class="poster" src="image/virtual art.png">
@@ -122,13 +139,13 @@
                                     <p>92</p>
                                 </div>
                             </div>
-                            <div class="catalog-bid">
+                            <div class="catalog__bid_current">
                                 <p>Current Bid</p>
                                 <p>4.89 ETH</p>
                             </div>
-                            <div>
-                                <button class="button button-bid" href="#">Place a bid</button>
-                            </div>
+                            <a href="#">
+                                <button class="button button_bid">Place a bid</button>
+                            </a>
                         </div>
                     </div>
                     <div>
@@ -150,18 +167,18 @@
                                     <p>92</p>
                                 </div>
                             </div>
-                            <div class="catalog-bid">
+                            <div class="catalog__bid_current">
                                 <p>Current Bid</p>
                                 <p>4.89 ETH</p>
                             </div>
-                            <div>
-                                <button class="button button button-bid" href="#">Place a bid</button>
-                            </div>
+                            <a href="#">
+                                <button class="button button_bid">Place a bid</button>
+                            </a>
                         </div>
                     </div>
                     <div>
                         <div class="countdown">
-                            <img class="poster image-blue" src="image/image 10.png">
+                            <img class="poster poster_blue" src="image/image 10.png">
                             <time>03:18:24</time>
                         </div>
                         <div>
@@ -178,97 +195,13 @@
                                     <p>92</p>
                                 </div>
                             </div>
-                            <div class="catalog-bid">
+                            <div class="catalog__bid_current">
                                 <p>Current Bid</p>
                                 <p>4.89 ETH</p>
                             </div>
-                            <div>
-                                <button class="button button-bid" href="#">Place a bid</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="countdown">
-                            <img class="poster" src="image/virtual art.png">
-                            <time>03:18:24</time>
-                        </div>
-                        <div>
-                            <div class="painter-estimation">
-                                <div class="profile">
-                                    <img src="image/Profile image1.png">
-                                    <div class="painter">
-                                        <p>Virtual Art</p>
-                                        <p>by @wzard</p>
-                                    </div>
-                                </div>
-                                <div class="estimation">
-                                    <img src="image/Vector.png">
-                                    <p>92</p>
-                                </div>
-                            </div>
-                            <div class="catalog-bid">
-                                <p>Current Bid</p>
-                                <p>4.89 ETH</p>
-                            </div>
-                            <div>
-                                <button class="button button-bid" href="#">Place a bid</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="countdown">
-                            <img class="poster" src="image/Image (2).png">
-                            <time>03:18:24</time>
-                        </div>
-                        <div>
-                            <div class="painter-estimation">
-                                <div class="profile">
-                                    <img src="image/Profile image1.png">
-                                    <div class="painter">
-                                        <p>Virtual Art</p>
-                                        <p>by @wzard</p>
-                                    </div>
-                                </div>
-                                <div class="estimation">
-                                    <img src="image/Vector.png">
-                                    <p>92</p>
-                                </div>
-                            </div>
-                            <div class="catalog-bid">
-                                <p>Current Bid</p>
-                                <p>4.89 ETH</p>
-                            </div>
-                            <div>
-                                <button class="button button-bid" href="">Place a bid</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="countdown">
-                            <img class="poster image-blue" src="image/image 10.png">
-                            <time>03:18:24</time>
-                        </div>
-                        <div>
-                            <div class="painter-estimation">
-                                <div class="profile">
-                                    <img src="image/Profile image1.png">
-                                    <div class="painter">
-                                        <p>Virtual Art</p>
-                                        <p>by @wzard</p>
-                                    </div>
-                                </div>
-                                <div class="estimation">
-                                    <img src="image/Vector.png">
-                                    <p>92</p>
-                                </div>
-                            </div>
-                            <div class="catalog-bid">
-                                <p>Current Bid</p>
-                                <p>4.89 ETH</p>
-                            </div>
-                            <div>
-                                <button class="button button-bid">Place a bid</button>
-                            </div>
+                            <a href="#">
+                                <button class="button button_bid">Place a bid</button>
+                            </a>
                         </div>
                     </div>
                     <div>
@@ -290,13 +223,13 @@
                                     <p>92</p>
                                 </div>
                             </div>
-                            <div class="catalog-bid">
+                            <div class="catalog__bid_current">
                                 <p>Current Bid</p>
                                 <p>4.89 ETH</p>
                             </div>
-                            <div>
-                                <button class="button button-bid">Place a bid</button>
-                            </div>
+                            <a href="#">
+                                <button class="button button_bid">Place a bid</button>
+                            </a>
                         </div>
                     </div>
                     <div>
@@ -318,18 +251,18 @@
                                     <p>92</p>
                                 </div>
                             </div>
-                            <div class="catalog-bid">
+                            <div class="catalog__bid_current">
                                 <p>Current Bid</p>
                                 <p>4.89 ETH</p>
                             </div>
-                            <div>
-                                <button class="button button-bid">Place a bid</button>
-                            </div>
+                            <a href="#">
+                                <button class="button button_bid">Place a bid</button>
+                            </a>
                         </div>
                     </div>
                     <div>
                         <div class="countdown">
-                            <img class="poster image-blue" src="image/image 10.png">
+                            <img class="poster poster_blue" src="image/image 10.png">
                             <time>03:18:24</time>
                         </div>
                         <div>
@@ -346,22 +279,106 @@
                                     <p>92</p>
                                 </div>
                             </div>
-                            <div class="catalog-bid">
+                            <div class="catalog__bid_current">
                                 <p>Current Bid</p>
                                 <p>4.89 ETH</p>
                             </div>
-                            <div>
-                                <button class="button button-bid">Place a bid</button>
+                            <a href="#">
+                                <button class="button button_bid">Place a bid</button>
                             </div>
+                        </a>
+                    </div>
+                    <div>
+                        <div class="countdown">
+                            <img class="poster" src="image/virtual art.png">
+                            <time>03:18:24</time>
+                        </div>
+                        <div>
+                            <div class="painter-estimation">
+                                <div class="profile">
+                                    <img src="image/Profile image1.png">
+                                    <div class="painter">
+                                        <p>Virtual Art</p>
+                                        <p>by @wzard</p>
+                                    </div>
+                                </div>
+                                <div class="estimation">
+                                    <img src="image/Vector.png">
+                                    <p>92</p>
+                                </div>
+                            </div>
+                            <div class="catalog__bid_current">
+                                <p>Current Bid</p>
+                                <p>4.89 ETH</p>
+                            </div>
+                            <a href="#">
+                                <button class="button button_bid">Place a bid</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="countdown">
+                            <img class="poster" src="image/Image (2).png">
+                            <time>03:18:24</time>
+                        </div>
+                        <div>
+                            <div class="painter-estimation">
+                                <div class="profile">
+                                    <img src="image/Profile image1.png">
+                                    <div class="painter">
+                                        <p>Virtual Art</p>
+                                        <p>by @wzard</p>
+                                    </div>
+                                </div>
+                                <div class="estimation">
+                                    <img src="image/Vector.png">
+                                    <p>92</p>
+                                </div>
+                            </div>
+                            <div class="catalog__bid_current">
+                                <p>Current Bid</p>
+                                <p>4.89 ETH</p>
+                            </div>
+                            <a href="#">
+                                <button class="button button_bid">Place a bid</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="countdown">
+                            <img class="poster poster_blue" src="image/image 10.png">
+                            <time>03:18:24</time>
+                        </div>
+                        <div>
+                            <div class="painter-estimation">
+                                <div class="profile">
+                                    <img src="image/Profile image1.png">
+                                    <div class="painter">
+                                        <p>Virtual Art</p>
+                                        <p>by @wzard</p>
+                                    </div>
+                                </div>
+                                <div class="estimation">
+                                    <img src="image/Vector.png">
+                                    <p>92</p>
+                                </div>
+                            </div>
+                            <div class="catalog__bid_current">
+                                <p>Current Bid</p>
+                                <p>4.89 ETH</p>
+                            </div>
+                            <a href="#">
+                                <button class="button button_bid">Place a bid</button>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <button class="button button-view">View All</button>
+                <a href="#">
+                    <button class="button button_view-all">View All</button>
+                </a>
             </section>
-            <section class="works">
-                <div>
-                    <h2>How it works</h2>
-                </div>
+            <section class="work">
+                <h2>How it works</h2>
                 <div class="steps">
                     <div>
                         <img src="image/Wallet.png">
@@ -391,13 +408,14 @@
                 </div>
             </section>
             <section class="collections">
-                <div class="circle">
+                <div class="title">
+                    <span class="circle"></span>
                     <h2>Popular Collections</h2>
                 </div>
-                <div class="collections-catalog">
+                <div class="collections__catalog">
                     <div>
                         <img class="poster" src="image/Image (3).png">
-                        <div class="collections-content">
+                        <div class="collections__content">
                             <div>
                                 <img src="image/Ellipse 2.png">
                                 <p>@wzard</p>
@@ -407,7 +425,7 @@
                     </div>
                     <div>
                         <img class="poster" src="image/Image (4).png">
-                        <div class="collections-content">
+                        <div class="collections__content">
                             <div>
                                 <img src="image/Ellipse 2.png">
                                 <p>@wzard</p>
@@ -417,7 +435,7 @@
                     </div>
                     <div>
                         <img class="poster" src="image/Image (3).png">
-                        <div class="collections-content">
+                        <div class="collections__content">
                             <div>
                                 <img src="image/Ellipse 2.png">
                                 <p>@wzard</p>
@@ -427,7 +445,7 @@
                     </div>
                     <div>
                         <img class="poster" src="image/Image (4).png">
-                        <div class="collections-content">
+                        <div class="collections__content">
                             <div>
                                 <img src="image/Ellipse 2.png">
                                 <p>@wzard</p>
@@ -437,7 +455,7 @@
                     </div>
                     <div>
                         <img class="poster" src="image\Image (3).png">
-                        <div class="collections-content">
+                        <div class="collections__content">
                             <div>
                                 <img src="image/Ellipse 2.png">
                                 <p>@wzard</p>
@@ -447,7 +465,7 @@
                     </div>
                     <div>
                         <img class="poster" src="image/Image (4).png">
-                        <div class="collections-content">
+                        <div class="collections__content">
                             <div>
                                 <img src="image/Ellipse 2.png">
                                 <p>@wzard</p>
@@ -457,7 +475,7 @@
                     </div>
                     <div>
                         <img class="poster" src="image/Image (3).png">
-                        <div class="collections-content">
+                        <div class="collections__content">
                             <div>
                                 <img src="image/Ellipse 2.png">
                                 <p>@wzard</p>
@@ -467,7 +485,7 @@
                     </div>
                     <div>
                         <img class="poster" src="image/Image (4).png">
-                        <div class="collections-content">
+                        <div class="collections__content">
                             <div>
                                 <img src="image/Ellipse 2.png">
                                 <p>@wzard</p>
@@ -477,7 +495,7 @@
                     </div>
                     <div>
                         <img class="poster" src="image/Image (3).png">
-                        <div class="collections-content">
+                        <div class="collections__content">
                             <div>
                                 <img src="image/Ellipse 2.png">
                                 <p>@wzard</p>
@@ -485,313 +503,318 @@
                             <p>ERC-721</p>
                         </div>
                     </div>
-                    <button class="button-circle">
-                        <div class="more"></div>
+                    <button class="button_circle">
+                        <div class="right"></div>
                     </button>
                 </div>
-                <button class="button button-view">View All</button>
+                <button class="button button_view-all" id="more">View All</button>
             </section>
             <section id="explore">
-                <div class="circle">
-                    <h2>Explore By Categories</h2>
+                <div class="title">
+                    <span class="circle"></span>
+                    <h2>Explore <span>By Categories</span></h2>
                 </div>
-                <div class="explore-catalog">
+                <div class="explore__catalog">
                     <div>
-                        <div class="poster-bid">
+                        <div class="poster_bid">
                             <img class="poster" src="image/unsplash_5rsNohd8bY8.png">
-                            <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            <p class="poster_bid__bid_place"><a href="#">Place a Bid</a></p>
                         </div>
                         <div>
                             <div class="painter-estimation">
-                                <div class="explore-profile">
+                                <div class="explore__profile">
                                     <img src="image/Ellipse 1.png">
-                                    <div class="explore-painter">
+                                    <div class="explore__profile__painter">
                                         <p>Virtual Art</p>
                                         <p>by @wzard</p>
                                     </div>
                                 </div>
-                                <div class="explore-estimation estimation">
+                                <div class="explore__estimation">
                                     <img src="image/Vector.png">
                                     <p>92</p>
                                 </div>
                             </div>
-                            <div class="catalog-bid">
+                            <div class="catalog__bid_current">
                                 <p>Current Bid</p>
                                 <p>4.89 ETH</p>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="poster-bid">
+                        <div class="poster_bid">
                             <img class="poster" src="image/COLLAG~1.PNG">
-                            <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            <p class="poster_bid__bid_place"><a href="#">Place a Bid</a></p>
                         </div>
                         <div>
                             <div class="painter-estimation">
-                                <div class="explore-profile">
+                                <div class="explore__profile">
                                     <img src="image/Ellipse 1.png">
-                                    <div class="explore-painter">
+                                    <div class="explore__profile__painter">
                                         <p>Virtual Art</p>
                                         <p>by @wzard</p>
                                     </div>
                                 </div>
-                                <div class="explore-estimation estimation">
+                                <div class="explore__estimation">
                                     <img src="image/Vector.png">
                                     <p>92</p>
                                 </div>
                             </div>
-                            <div class="catalog-bid">
+                            <div class="catalog__bid_current">
                                 <p>Current Bid</p>
                                 <p>4.89 ETH</p>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="poster-bid">
+                        <div class="poster_bid">
                             <img class="poster" src="image/Image (6).png">
-                            <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            <p class="poster_bid__bid_place"><a href="#">Place a Bid</a></p>
                         </div>
                         <div>
                             <div class="painter-estimation">
-                                <div class="explore-profile">
+                                <div class="explore__profile">
                                     <img src="image/Ellipse 1.png">
-                                    <div class="explore-painter">
+                                    <div class="explore__profile__painter">
                                         <p>Virtual Art</p>
                                         <p>by @wzard</p>
                                     </div>
                                 </div>
-                                <div class="explore-estimation estimation">
+                                <div class="explore__estimation">
                                     <img src="image/Vector.png">
                                     <p>92</p>
                                 </div>
                             </div>
-                            <div class="catalog-bid">
+                            <div class="catalog__bid_current">
                                 <p>Current Bid</p>
                                 <p>4.89 ETH</p>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="poster-bid">
+                        <div class="poster_bid">
                             <img class="poster" src="image/COLLAG~1.PNG">
-                            <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            <p class="poster_bid__bid_place"><a href="#">Place a Bid</a></p>
                         </div>
                         <div>
                             <div class="painter-estimation">
-                                <div class="explore-profile">
+                                <div class="explore__profile">
                                     <img src="image/Ellipse 1.png">
-                                    <div class="explore-painter">
+                                    <div class="explore__profile__painter">
                                         <p>Virtual Art</p>
                                         <p>by @wzard</p>
                                     </div>
                                 </div>
-                                <div class="explore-estimation estimation">
+                                <div class="explore__estimation">
                                     <img src="image/Vector.png">
                                     <p>92</p>
                                 </div>
                             </div>
-                            <div class="catalog-bid">
+                            <div class="catalog__bid_current">
                                 <p>Current Bid</p>
                                 <p>4.89 ETH</p>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="poster-bid">
+                        <div class="poster_bid">
                             <img class="poster" src="image\unsplash_5rsNohd8bY8.png">
-                            <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            <p class="poster_bid__bid_place"><a href="#">Place a Bid</a></p>
                         </div>
                         <div>
                             <div class="painter-estimation">
-                                <div class="explore-profile">
+                                <div class="explore__profile">
                                     <img src="image/Ellipse 1.png">
-                                    <div class="explore-painter">
+                                    <div class="explore__profile__painter">
                                         <p>Virtual Art</p>
                                         <p>by @wzard</p>
                                     </div>
                                 </div>
-                                <div class="explore-estimation estimation">
+                                <div class="explore__estimation">
                                     <img src="image/Vector.png">
                                     <p>92</p>
                                 </div>
                             </div>
-                            <div class="catalog-bid">
+                            <div class="catalog__bid_current">
                                 <p>Current Bid</p>
                                 <p>4.89 ETH</p>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="poster-bid">
+                        <div class="poster_bid">
                             <img class="poster" src="image\COLLAG~1.PNG">
-                            <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            <p class="poster_bid__bid_place"><a href="#">Place a Bid</a></p>
                         </div>
                         <div>
                             <div class="painter-estimation">
-                                <div class="explore-profile">
+                                <div class="explore__profile">
                                     <img src="image/Ellipse 1.png">
-                                    <div class="explore-painter">
+                                    <div class="explore__profile__painter">
                                         <p>Virtual Art</p>
                                         <p>by @wzard</p>
                                     </div>
                                 </div>
-                                <div class="explore-estimation estimation">
+                                <div class="explore__estimation">
                                     <img src="image/Vector.png">
                                     <p>92</p>
                                 </div>
                             </div>
-                            <div class="catalog-bid">
+                            <div class="catalog__bid_current">
                                 <p>Current Bid</p>
                                 <p>4.89 ETH</p>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="poster-bid">
+                        <div class="poster_bid">
                             <img class="poster" src="image/Image (6).png">
-                            <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            <p class="poster_bid__bid_place"><a href="#">Place a Bid</a></p>
                         </div>
                         <div>
                             <div class="painter-estimation">
-                                <div class="explore-profile">
+                                <div class="explore__profile">
                                     <img src="image/Ellipse 1.png">
-                                    <div class="explore-painter">
+                                    <div class="explore__profile__painter">
                                         <p>Virtual Art</p>
                                         <p>by @wzard</p>
                                     </div>
                                 </div>
-                                <div class="explore-estimation estimation">
+                                <div class="explore__estimation">
                                     <img src="image/Vector.png">
                                     <p>92</p>
                                 </div>
                             </div>
-                            <div class="catalog-bid">
+                            <div class="catalog__bid_current">
                                 <p>Current Bid</p>
                                 <p>4.89 ETH</p>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="poster-bid">
+                        <div class="poster_bid">
                             <img class="poster" src="image/COLLAG~1.PNG">
-                            <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            <p class="poster_bid__bid_place"><a href="#">Place a Bid</a></p>
                         </div>
                         <div>
                             <div class="painter-estimation">
-                                <div class="explore-profile">
+                                <div class="explore__profile">
                                     <img src="image/Ellipse 1.png">
-                                    <div class="explore-painter">
+                                    <div class="explore__profile__painter">
                                         <p>Virtual Art</p>
                                         <p>by @wzard</p>
                                     </div>
                                 </div>
-                                <div class="explore-estimation estimation">
+                                <div class="explore__estimation">
                                     <img src="image/Vector.png">
                                     <p>92</p>
                                 </div>
                             </div>
-                            <div class="catalog-bid">
+                            <div class="catalog__bid_current">
                                 <p>Current Bid</p>
                                 <p>4.89 ETH</p>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="poster-bid">
+                        <div class="poster_bid">
                             <img class="poster" src="image/unsplash_5rsNohd8bY8.png">
-                            <p class="place-bid"><a href="#">Place a Bid</a></p>
+                            <p class="poster_bid__bid_place"><a href="#">Place a Bid</a></p>
                         </div>
                         <div>
                             <div class="painter-estimation">
-                                <div class="explore-profile">
+                                <div class="explore__profile">
                                     <img src="image/Ellipse 1.png">
-                                    <div class="explore-painter">
+                                    <div class="explore__profile__painter">
                                         <p>Virtual Art</p>
                                         <p>by @wzard</p>
                                     </div>
                                 </div>
-                                <div class="explore-estimation estimation">
+                                <div class="explore__estimation">
                                     <img src="image/Vector.png">
                                     <p>92</p>
                                 </div>
                             </div>
-                            <div class="catalog-bid">
+                            <div class="catalog__bid_current">
                                 <p>Current Bid</p>
                                 <p>4.89 ETH</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="button button-view">View All</button>
+                <a href="#">
+                    <button class="button button_view-all">View All</button>
+                </a>
             </section>
             <section id="creators">
-                <div class="circle">
+                <div class="title">
+                    <span class="circle"></span>
                     <h2>Top Creators</h2>
                 </div>
-                <div class="creators-cards">
+                <div class="creators__cards">
                     <div>
                         <img src="image/Profile image1.png">
-                        <div class="creators-content">
+                        <div class="creators__cards__content">
                             <p>Wzard Dee</p>
                             <p>4.89 ETH</p>
                         </div>
-                        <div class="items">
+                        <div class="creators__cards__items">
                             <p>33</p>
                             <p>Items</p>
                         </div>
                     </div>
                     <div>
                         <img src="image/Ellipse 2.png">
-                        <div class="creators-content">
+                        <div class="creators__cards__content">
                             <p>Wzard Dee</p>
                             <p>4.89 ETH</p>
                         </div>
-                        <div class="items">
+                        <div class="creators__cards__items">
                             <p>33</p>
                             <p>Items</p>
                         </div>
                     </div>
                     <div>
                         <img src="image/Ellipse 14.png">
-                        <div class="creators-content">
+                        <div class="creators__cards__content">
                             <p>Wzard Dee</p>
                             <p>4.89 ETH</p>
                         </div>
-                        <div class="items">
+                        <div class="creators__cards__items">
                             <p>33</p>
                             <p>Items</p>
                         </div>
                     </div>
                     <div>
                         <img src="image/Mask Group.png">
-                        <div class="creators-content">
+                        <div class="creators__cards__content">
                             <p>Wzard Dee</p>
                             <p>4.89 ETH</p>
                         </div>
-                        <div class="items">
+                        <div class="creators__cards__items">
                             <p>33</p>
                             <p>Items</p>
                         </div>
                     </div>
                 </div>
+                <a href="#">
+                    <button class="button button_view-all">View All</button>
+                </a>
             </section>
             <section id="subscribe">
                 <h2>Ready for Next NFT Drop?</h2>
                 <form class="subscription">
-                    <input class="add-email" type="email" placeholder="info@gmail.com">
-                    <button class="submit-email">
-                        <p class="before-submit">Subscribe</p>
-                    </button>
+                    <input class="email_add" type="email" placeholder="info@gmail.com">
+                    <button class="email_submit">Subscribe</button>
                 </form>
             </section>
         </main>
         <footer>
-            <div>
-                <a class="logo-footer" href="#">
+            <div class="footer_item-1">
+                <a class="footer__logo" href="#">
                     <img src="image/image (5).png">
                 </a>
                 <div>
-                    <div class="footer-text">
+                    <div class="footer__text">
                         <p>Nec, enim lacus, magna pharetra. Phasellus tincidunt nulla pharetra <br>gravida est.</p>
                     </div>
                     <div class="elements">
@@ -808,23 +831,23 @@
                             <img src="image/Vector (3).png">
                         </a>
                     </div>
-                    <div class="footer-rights">
+                    <div class="footer__rights">
                         <p>All rights reserved@2021</p>
                     </div>
                 </div>
             </div>
             <div class="about">
                 <h3>About Us</h3>
-                <ul class="about-list">
+                <ul class="about__list">
                     <li><a href="#">About NFTs</a></li>
-                    <li><a href="#">Live Auctions</a></li>
+                    <li><a href="#">Live <span>Auctions</span></a></li>
                     <li><a href="#">NFT Blog</a></li>
                     <li><a href="#">Activity</a></li>
                 </ul>
             </div>
             <div class="support">
                 <h3>Support</h3>
-                <ul class="support-list">
+                <ul class="support__list">
                     <li><a href="#">Help & Support</a></li>
                     <li><a href="#">Item Details</a></li>
                     <li><a href="#">Author Profile</a></li>
