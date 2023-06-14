@@ -9,17 +9,6 @@
             @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap');
         </style>
-        <script>
-            const buttonRight = document.getElementById('right');
-            const buttonLeft = document.getElementById('left');
-            
-            buttonRight.onclick = function () {
-                document.getElementById('catalog').scrollLeft += 100;
-            };
-            buttonLeft.onclick = function () {
-                document.getElementById('catalog').scrollLeft -= 100;
-            };
-        </script>
     </head>
     <body>
         <header>
@@ -855,5 +844,16 @@
                 </ul>
             </div>
         </footer>
-    </body>
+        <script>
+            const buttonRight = document.getElementById('right');
+            const buttonLeft = document.getElementById('left');
+            
+            buttonRight.onclick = function () {
+                document.getElementById('catalog').scrollLeft += 100;
+            };
+            buttonLeft.onclick = function () {
+                document.getElementById('catalog').scrollLeft -= 100;
+            };
+        </script>
+        </body>
 </html>
